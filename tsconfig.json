@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "node16" // Or "nodenext"
+    "module": "NodeNext",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+  }
+}
