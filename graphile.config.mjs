@@ -65,11 +65,12 @@ const BlogPostPlugin = {
           from: sql`
             (
               SELECT
-                ct.name as ct_name,
-                e.id as entry_id,
-                f.name as field_name,
-                fv.string_value,
-                fv.boolean_value, fv.number_value
+                ct.name as ct_name
+              , e.id as entry_id
+              , f.name as field_name
+              , fv.string_value
+              , fv.boolean_value
+              , fv.number_value
               FROM app_public.entries e
               JOIN app_public.content_types ct ON e.content_type_id = ct.id
               LEFT JOIN app_public.field_values fv ON e.id = fv.entry_id
