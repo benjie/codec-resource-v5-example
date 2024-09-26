@@ -78,6 +78,15 @@ const BlogPostPlugin = {
           `,
           name: "blog_posts",
           executor: event.helpers.pgIntrospection.getExecutorForService("main"),
+          uniques: [
+            // TODO: add a primary key, e.g.
+            /*
+            {
+              attributes: ["ct_name", "entry_id"],
+              isPrimary: true,
+            },
+            */
+          ],
         });
       },
     },
